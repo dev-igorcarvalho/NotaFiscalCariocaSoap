@@ -1,0 +1,19 @@
+      1- Importe o certificado .PFX para o IE >>> FERRAMENTAS/OPÇÕES DA INTERNET/ ABA CONTEÚDO / BOTÃO CERTIFICADOS.   
+      2- Selecione a aba "Pessoal".   
+      3- Clique em importar.   
+      4- O Sistema vai abrir um assistente. Selecione o Certificado e clique em avançar.   
+      5- Na próxima tela MARQUE O CHECBOX "Marcar esta chave como exportável. Isso possibilitará o backup e transporte das chaves posteriormente". Como o texto diz se você não marcar esta opção o certificado não poderá ser exportado   
+      6- Após ser importado seu certificado vai para a aba Pessoal. Clique sobre ele e clique em "exportar"   
+      7- Clique em avançar   
+      8- Na próxima tela marque a opção: "Sim, exportar a chave privada". Clique em avançar.   
+      9- Na janela seguinte marque o checkbox "Incluir todos os certificados no caminho de certificação, se possível". <<ESTA OPÇÃO É CRUCIAL NÃO ESQUEÇA DELA !!!   
+      10- Informe a senha e a seguir o local onde o arquivo será salvo.   
+      11- Feito isso está pronto você já pode utilizar o certificado no seu projeto.  
+      12- è necessário importar o certificado pra dentro de um keystore existente do java
+      13- Para isso, copiei o cacerts original da Sun em C:\Program Files\Java\jdk1.6.0_30\jre\lib\security\cacerts para outro diretório para não quebrar o arquivo original.
+      14-  E então executei o seguinte comando neste arquivo cópia:
+      15 - keytool -importkeystore -srckeystore meu-certificado.pfx -destkeystore cacerts -srcstoretype PKCS12 -deststoretype JKS 
+
+
+
+
